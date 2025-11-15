@@ -11,8 +11,12 @@ def index():
 def account():
 	return "User account will be shown here"
 
-@app.route("/page/<string:book_id>")
-def page(book_id):
+@app.route("/create_post")
+def create_post():
+	return render_template("create_post.html")
+
+@app.route("/book/<string:book_id>")
+def book(book_id):
 	return "This is where information about " + str(book_id) + " will be shown"
 
 @app.route("/create_account")
@@ -23,11 +27,7 @@ def create_account():
 def signin():
 	return render_template("signin.html")
 
-@app.route("/result", methods=["POST"])
+@app.route("/account", methods=["POST"])
 def result():
 	message = request.form["message"]
-	return render_template("result.html", message=message)
-
-@app.route("/page2")
-def page2():
-	return "Toinen sivu"
+	return render_template("account.html", message=message)

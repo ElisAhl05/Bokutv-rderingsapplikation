@@ -1,15 +1,47 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="sv">
 <head>
-  <title>Etusivu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min Hemsida</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
-
 <body>
-  <h1>Etusivu</h1>
-  <p>
-    <b>Tervetuloa</b> <i>sovellukseen</i>!
-  </p>
-</body>
 
+    <h1>Welcome to the book review site!</h1>
+    <form action="/create_post">
+        <button type="submit">Create post</button>
+    </form>
+    <form action="/create_account">
+        <button type="submit">Log in</button>
+    </form>
+</body>
 </html>
